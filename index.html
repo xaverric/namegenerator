@@ -1,0 +1,30 @@
+<html>
+	<head>
+    	<meta charset="UTF-8">
+    	<title>GENERÁTOR JMEN</title>
+    	
+    	<link rel="stylesheet" type="text/css" href="style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+		<script src="dist/main.js"></script>
+	</head>
+	<body>
+		<div ng-app="nameGeneratorApp" id="mainBox">
+    		<h1>Generátor jmen</h1>
+    		<div ng-controller="nameGeneratorController" id="nameContainer">
+        		<p>
+            	<b>Jméno:</b> {{generatedName.name}}
+        		</p>
+        		<p>
+            	<b>Svátek:</b> {{generatedName.date + "2018"}}
+        		</p>
+        		<input type="button" value="<" ng-click="getPrevious()" class="pure-material-button-contained red"/>
+        		<input type="button" value="Generuj" ng-click="getRandomName()" class="pure-material-button-contained"/>
+    		</div>
+		</div>
+	</body>
+</html>
+
+
+
